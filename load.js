@@ -4,10 +4,13 @@ var list_js = 'https://raw.github.com/ronnywang/tw-starchoxic/master/list.json';
 starchoxic_list = function(map){
     $('a').each(function(){
         var $this = $(this);
-        if (!map[$this.attr('href')]) {
+        var value = map[$this.attr('href')];
+        if (!value) [
             return;
         }
-        $('<a></a>').attr('href', json_base + map[$this.attr('href')]).attr('target', '_blank').text('json').insertAfter($this);
+        for (var id in value) {
+            $('<a></a>').attr('href', json_base + value[id]).attr('target', '_blank').text(id).insertAfter($this);
+        }
     });
 };
 
