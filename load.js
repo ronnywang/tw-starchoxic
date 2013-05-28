@@ -9,7 +9,7 @@ starchoxic_list = function(map){
             return;
         }
         for (var id in value) {
-            $('<a></a>').attr('href', json_base + value[id]).attr('target', '_blank').text('[' + id ']').insertAfter($this);
+            $('<a></a>').attr('href', json_base + value[id]).attr('target', '_blank').text('[' + id + ']').insertAfter($this);
         }
     });
 };
