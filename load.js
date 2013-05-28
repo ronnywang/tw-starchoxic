@@ -5,7 +5,7 @@ starchoxic_list = function(map){
     $('a').each(function(){
         var $this = $(this);
         var value = map[$this.attr('href')];
-        if (!value) [
+        if (!value) {
             return;
         }
         for (var id in value) {
